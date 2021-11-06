@@ -29,7 +29,6 @@ void setup()
   SPI.beginTransaction(SPISettings(12000000, MSBFIRST, SPI_MODE1));
   SPI.setClockDivider(SPI_CLOCK_DIV16);
   lt.begin();
-//  lt.writeRegister(35, 0x0F00);  //Setting the number of repeated dispatches to 255
   lt.setCurrentControl(15,15);  //Setting the power and gain of antenna signal,4bit value-0xf
   lt.setDataRate(LT8920::LT8920_1MBPS); // default baud Rate was 1MBPSa
   lt.setChannel(0x6d);  // Setting the Channel
